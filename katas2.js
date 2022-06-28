@@ -1,11 +1,20 @@
 // comece a criar a sua função add na linha abaixo
-
+function add(a, b) {
+    return a + b
+}
 
 // descomente a linha seguinte para testar sua função
 // console.assert(add(3, 5) === 8, 'A função add não está funcionando como esperado');
 
 
 // comece a criar a sua função multiply na linha abaixo
+function multiply(a, b) {
+    let result = 0
+    for (let i = 1; i <= b; i++) {
+        result = add(result, a)
+    }
+    return result
+}
 
 
 // descomente a linha seguinte para testar sua função
@@ -13,7 +22,13 @@
 
 
 // comece a criar a sua função power na linha abaixo
-
+function power(x, n) {
+    let result = 1
+    for (let i = 1; i <= n; i++) {
+        result = multiply(result, x)
+    }
+    return result
+}
 
 // descomente a linha seguinte para testar sua função
 // console.assert(power(3, 4) === 81, 'A função power não está funcionando como esperado');
@@ -23,6 +38,16 @@
 
 
 // descomente a linha seguinte para testar sua função
+
+function factorial(n) {
+    let resultado = 1
+
+    for (let i = 1; i <= n; i++) {
+        resultado = multiply(resultado, i)
+    }
+    return resultado
+}
+
 // console.assert(factorial(5) === 120, 'A função factorial não está funcionando como esperado');
 
 
@@ -34,4 +59,18 @@
 
 
 // descomente a linha seguinte para testar sua função
-// console.assert(fibonacci(7) === 13, 'A função fibonacci não está funcionando como esperado');
+function fibonacci(n) {
+    let fibon1 = 0
+    let fibon2 = 1
+    let result = 0
+    // let temporaria = 0
+ 
+    for (let i = 1; i < n; i++) { 
+        result = add(fibon1, fibon2)
+        fibon1 = fibon2
+        fibon2 = result  
+    }
+    return result
+}
+console.log(fibonacci())
+console.assert(fibonacci(7) === 13, 'A função fibonacci não está funcionando como esperado');
