@@ -10,12 +10,11 @@ function add(a, b) {
 // comece a criar a sua função multiply na linha abaixo
 function multiply(a, b) {
     let result = 0
-    for (let i = 1; i <= b; i++) {
+    for (let i = 1; i <= b; i =add(i,1)) {
         result = add(result, a)
     }
     return result
 }
-
 
 // descomente a linha seguinte para testar sua função
 // console.assert(multiply(4, 6) === 24, 'A função multiply não está funcionando como esperado');
@@ -24,7 +23,7 @@ function multiply(a, b) {
 // comece a criar a sua função power na linha abaixo
 function power(x, n) {
     let result = 1
-    for (let i = 1; i <= n; i++) {
+    for (let i = 1; i <= n; i = add (i,1)) {
         result = multiply(result, x)
     }
     return result
@@ -42,13 +41,13 @@ function power(x, n) {
 function factorial(n) {
     let resultado = 1
 
-    for (let i = 1; i <= n; i++) {
+    for (let i = 1; i <= n; i = add (i,1)) {
         resultado = multiply(resultado, i)
     }
     return resultado
 }
 
-// console.assert(factorial(5) === 120, 'A função factorial não está funcionando como esperado');
+console.assert(factorial(5) === 120, 'A função factorial não está funcionando como esperado');
 
 
 /**
@@ -65,12 +64,12 @@ function fibonacci(n) {
     let result = 0
     // let temporaria = 0
  
-    for (let i = 1; i < n; i++) { 
+    for (let i = 1; i < n;i = add (i,1)) { 
         result = add(fibon1, fibon2)
         fibon1 = fibon2
         fibon2 = result  
     }
     return result
 }
-console.log(fibonacci())
-console.assert(fibonacci(7) === 13, 'A função fibonacci não está funcionando como esperado');
+
+// console.assert(fibonacci(7) === 13, 'A função fibonacci não está funcionando como esperado');
